@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="description" content="JQuery Periodic Table assignment for week2">
+    <title>JQuery Interactive Periodic Table</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/periodic2.css" />
+    <script src="jquery-1.12.3.min.js"></script>
+    <script type="text/javascript">
+
+          $(document).ready(function(){
+            $("input").click(function() {
+              $( "#search" ).focus();
+            });
+            $("h1").click(function() {
+              $("h1").fadeTo("slow","0.4").fadeToggle( "4000", "linear" ).before('Welcome');
+            })
+            $("h2").hover(function() {
+              $("h2").slideToggle("6000");
+            })
+            $('button.input').click(function(){
+              $('input').val();
+                $("#results").append(text);
+            })
+            $('button.alkali').click(function(){
+              $('.tan_square').css({'background-color':'#ffcc99'});
+            })
+            $('button.alkaline').click(function(){
+              $('.blue_square').css({'background-color':'#6495ED'});
+            })
+            $('button.noble').click(function(){
+              $('.darkpink_square').css({'background-color':'#ff3399'});
+            })
+            $('button.halogens').click(function(){
+              $('.red_square').css({'background-color':'#ff0000'});
+            })
+            $('button.transition').click(function(){
+              $('.pink_square').css({'background-color':'#FF9999'});
+            })
+            $('button.lanthanoids').click(function(){
+              $('.ltgreen_square').css({'background-color':'#99FF99'});
+            })
+            $('button.actinoids').click(function(){
+              $('.green_square').css({'background-color':'#33CC00'});
+            })
+            $('button.other').click(function(){
+              $('.yellow_square').css({'background-color':'#FFFF00'});
+            })
+            $('button.post').click(function(){
+              $('.gold_square').css({'background-color':'#FFCC66'});
+            })
+            $('button.metalloids').click(function(){
+              $('.gray_square').css({'background-color':'#CCCCCC'});
+            })
+            $('button.reset').click(function(){
+              $( "p.browser_reset_message" ).html("To reset the page back to its original state, please refresh your browser.");
+            });
+            $('button.define').click(function(){
+              if ( $( "p.about" ).is( ":hidden" ) ) {
+                $( "p.about" ).slideDown( "slow" );
+              } else {
+                $( "p.about" ).slideUp("slow");
+              }
+            })
+            $('button.addclass').click(function(){
+              $('p.about.last').last().addClass('highlight').append(' Sorry for the annoying H2 slide effect').after("<b>That's All Folks!</b>");
+            })
+              $('button.var').click(function(){
+                var title=$( "em" ).attr("title");
+                $("p.emphasis").text(title);
+            })
+            $('input').click(function(){
+              var countChecked = function() {
+                var n = $( "input:checked" ).length;
+                $( "div.results" ).text( n + (n === 1 ? " is" : " are") + " checked!" );
+              };
+                countChecked();
+                $( "input[type=checkbox]" ).on( "click", countChecked );
+            })
+            $( "p.data_example" ).data( "test", { first: 50, last: 250 } );
+              $( "span.first" ).text( $( "p.data_example" ).data( "test" ).first );
+          });// end documment ready line
+    </script>
+  </head>
+
+  <body>
+
+    <h1>Interactive JQuery Periodic Table</h1>
+        <p class="larger_font">Click on H1 headline above to "fadeTO" gray &amp; disappear, "fadeToggle" and see a tiny "before" greeting.<br /></p>
+        <form action="http://www.example.com/profile.php">
+          <p class="larger_font">Please indicate why you would like to know more about the periodic table: (see ".val" count below)<br />
+            <input type="checkbox" name="status" value="student" /> Student
+            <input type="checkbox" name="status" value="teacher" /> Teacher
+            <input type="checkbox" name="status" value="curious" /> Just Curious
+          </p>
+        </form>
+      <div class="results"></div>
+      <div class="nav">
+        <h2>Chemistry is Fun! Try this interactive periodic table</h2>
+          <p class="larger_font">Hovering over the H2 headline above uses "slide and fade toggle" which is cool, but annoying.<br />
+            Clicking the buttons below changes the "css background property" to color each group in the table below.<br />
+          <p class="browser_reset_message"></p>
+          <button type="button" class="alkali">Alkali</button>
+          <button type="button" class="alkaline">Alkaline Earth Metals</button>
+          <button type="button" class="noble">Noble Gases</button>
+          <button type="button" class="halogens">Halogens</button>
+          <button type="button" class="transition">Transition Metals</button>
+          <button type="button" class="lanthanoids">Lanthanoids</button>
+          <button type="button" class="actinoids">Actinoids</button>
+          <button type="button" class="other">Other Non-Metals</button>
+          <button type="button" class="post">Post-Transition</button>
+          <button type="button" class="metalloids">Metalloids</button>
+          <button type="button" class="reset">How to Reset</button>
+    </div>
+    <div id="top_section">
+        <div class="one_column_wrapper">
+          <p class="square yellow_square">1<br /><span class="element_name">H</span><br />1.008</p>
+          <p class="square tan_square">3<br /><span class="element_name">Li</span><br />6.94</p>
+          <p class="square tan_square">11<br /><span class="element_name">Na</span><br />22.99</p>
+          <p class="square tan_square">19<br /><span class="element_name">K</span><br />39.09</p>
+          <p class="square tan_square">37<br /><span class="element_name">Rb</span><br />85.47</p>
+          <p class="square tan_square">55<br /><span class="element_name">Cs</span><br />132.91</p>
+          <p class="square tan_square">87<br /><span class="element_name">Fr</span><br />[223.02]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square"></p>
+          <p class="square blue_square">4<br /><span class="element_name">Be</span><br />9.012</p>
+          <p class="square blue_square">12<br /><span class="element_name">Mg</span><br />24.305</p>
+          <p class="square blue_square">20<br /><span class="element_name">Ca</span><br />40.078</p>
+          <p class="square blue_square">38<br /><span class="element_name">Sr</span><br />87.62</p>
+          <p class="square blue_square">56<br /><span class="element_name">Ba</span><br />137.33</p>
+          <p class="square blue_square">88<br /><span class="element_name">Ra</span><br />[226.03]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square pink_square">21<br /><span class="element_name">Sc</span><br />44.956</p>
+          <p class="square pink_square">39<br /><span class="element_name">Y</span><br />88.906</p>
+          <p class="square ltgreen_square">71<br /><span class="element_name">Lu</span><br />174.97</p>
+          <p class="square green_square">103<br /><span class="element_name">Lr</span><br />[262.11]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square pink_square">22<br /><span class="element_name">Ti</span><br />47.867</p>
+          <p class="square pink_square">40<br /><span class="element_name">Zr</span><br />91,224</p>
+          <p class="square pink_square">72<br /><span class="element_name">Hf</span><br />178.49</p>
+          <p class="square pink_square">104<br /><span class="element_name">Rf</span><br />[265.12]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square pink_square">23<br /><span class="element_name">V</span><br />44.956</p>
+          <p class="square pink_square">41<br /><span class="element_name">Nb</span><br />88.906</p>
+          <p class="square pink_square">73<br /><span class="element_name">Ta</span><br />174.97</p>
+          <p class="square pink_square">105<br /><span class="element_name">Db</span><br />[262.11]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square pink_square">24<br /><span class="element_name">Cr</span><br />51.996</p>
+          <p class="square pink_square">42<br /><span class="element_name">Mo</span><br />95.96</p>
+          <p class="square pink_square">74<br /><span class="element_name">W</span><br />183.84</p>
+          <p class="square pink_square">106<br /><span class="element_name">Sg</span><br />[271.13]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square pink_square">25<br /><span class="element_name">Mn</span><br />54.938</p>
+          <p class="square pink_square">43<br /><span class="element_name">Tc</span><br />[97.91]]</p>
+          <p class="square pink_square">75<br /><span class="element_name">Re</span><br />186.21</p>
+          <p class="square pink_square">107<br /><span class="element_name">Bh</span><br />[270]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square pink_square">26<br /><span class="element_name">Fe</span><br />55.845</p>
+          <p class="square pink_square">44<br /><span class="element_name">Ru</span><br />101.07</p>
+          <p class="square pink_square">76<br /><span class="element_name">Os</span><br />190.23</p>
+          <p class="square pink_square">108<br /><span class="element_name">Hs</span><br />[277.15]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square pink_square">27<br /><span class="element_name">Co</span><br />58.993</p>
+          <p class="square pink_square">45<br /><span class="element_name">Rh</span><br />102.91</p>
+          <p class="square pink_square">77<br /><span class="element_name">Ir</span><br />192.22</p>
+          <p class="square pink_square">109<br /><span class="element_name">Mt</span><br />[276.15]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square pink_square">28<br /><span class="element_name">Ni</span><br />58.693</p>
+          <p class="square pink_square">46<br /><span class="element_name">Pd</span><br />106.42</p>
+          <p class="square pink_square">78<br /><span class="element_name">Pt</span><br />195.08</p>
+          <p class="square pink_square">110<br /><span class="element_name">Ds</span><br />[281.16]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square pink_square">29<br /><span class="element_name">Cu</span><br />63.546</p>
+          <p class="square pink_square">47<br /><span class="element_name">Ag</span><br />107.87</p>
+          <p class="square pink_square">79<br /><span class="element_name">Au</span><br />196.97</p>
+          <p class="square pink_square">111<br /><span class="element_name">Rg</span><br />[280.16]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square blank_square"></p>
+          <p class="square pink_square">30<br /><span class="element_name">Zn</span><br />65.38</p>
+          <p class="square pink_square">48<br /><span class="element_name">Cd</span><br />112.41</p>
+          <p class="square pink_square">80<br /><span class="element_name">Hg</span><br />200.59</p>
+          <p class="square pink_square">112<br /><span class="element_name">Cn</span><br />[285.17]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square blank_square"></p>
+          <p class="square gray_square">5<br /><span class="element_name">B</span><br />10.81</p>
+          <p class="square gold_square">13<br /><span class="element_name">Al</span><br />26.982</p>
+          <p class="square gold_square">31<br /><span class="element_name">Ga</span><br />69.723</p>
+          <p class="square gold_square">49<br /><span class="element_name">In</span><br />114.82</p>
+          <p class="square gold_square">81<br /><span class="element_name">Tl</span><br />204.38</p>
+          <p class="square gold_square">113<br /><span class="element_name">Uut</span><br />[284.18]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square"></p>
+          <p class="square yellow_square">6<br /><span class="element_name">C</span><br />12.011</p>
+          <p class="square gray_square">14<br /><span class="element_name">Si</span><br />28.085</p>
+          <p class="square gray_square">32<br /><span class="element_name">Ge</span><br />72.63</p>
+          <p class="square gold_square">50<br /><span class="element_name">Sn</span><br />118.71</p>
+          <p class="square gold_square">82<br /><span class="element_name">Pb</span><br />207.2</p>
+          <p class="square gold_square">114<br /><span class="element_name">Fl</span><br />[289.19]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square"></p>
+          <p class="square yellow_square">7<br /><span class="element_name">N</span><br />14.007</p>
+          <p class="square yellow_square">15<br /><span class="element_name">P</span><br />30.974</p>
+          <p class="square gray_square">33<br /><span class="element_name">As</span><br />74.922</p>
+          <p class="square gray_square">51<br /><span class="element_name">Sb</span><br />121.76</p>
+          <p class="square gold_square">83<br /><span class="element_name">Bi</span><br />208.98</p>
+          <p class="square gold_square">115<br /><span class="element_name">Uup</span><br />[293]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square"></p>
+          <p class="square yellow_square">8<br /><span class="element_name">O</span><br />15.999</p>
+          <p class="square yellow_square">16<br /><span class="element_name">S</span><br />32.06</p>
+          <p class="square yellow_square">34<br /><span class="element_name">Se</span><br />78.96</p>
+          <p class="square gray_square">52<br /><span class="element_name">Te</span><br />127.60</p>
+          <p class="square gray_square">84<br /><span class="element_name">Po</span><br />[208.98]</p>
+          <p class="square gold_square">116<br /><span class="element_name">Lv</span><br />[293]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square"></p>
+          <p class="square red_square">9<br /><span class="element_name">F</span><br />18.998</p>
+          <p class="square red_square">17<br /><span class="element_name">Cl</span><br />35.45</p>
+          <p class="square red_square">35<br /><span class="element_name">Br</span><br />79.904</p>
+          <p class="square red_square">53<br /><span class="element_name">I</span><br />126.90</p>
+          <p class="square red_square">85<br /><span class="element_name">At</span><br />[209.99]]</p>
+          <p class="square gold_square">117<br /><span class="element_name">Uus</span><br />[294]</p>
+      </div>
+      <div class="one_column_wrapper">
+          <p class="square darkpink_square">2<br /><span class="element_name">He</span><br />4.003</p>
+          <p class="square darkpink_square">10<br /><span class="element_name">Ne</span><br />20.180</p>
+          <p class="square darkpink_square">18<br /><span class="element_name">Ar</span><br />39.948</p>
+          <p class="square darkpink_square">36<br /><span class="element_name">Kr</span><br />83.798</p>
+          <p class="square darkpink_square">54<br /><span class="element_name">Xe</span><br />131.29</p>
+          <p class="square darkpink_square">86<br /><span class="element_name">Rn</span><br />[222.02]</p>
+          <p class="square darkpink_square">118<br /><span class="element_name">Uuo</span><br />[294]</p>
+      </div>
+    </div>
+    <div id="bottom_section">
+        <p class="square_row ltgreen_square">57<br /><span class="element_name">La</span><br />138.91</p>
+        <p class="square_row ltgreen_square">58<br /><span class="element_name">Ce</span><br />140.12</p>
+        <p class="square_row ltgreen_square">59<br /><span class="element_name">Pr</span><br />140.91</p>
+        <p class="square_row ltgreen_square">60<br /><span class="element_name">Nd</span><br />144.24</p>
+        <p class="square_row ltgreen_square">61<br /><span class="element_name">Pm</span><br />[144.91]</p>
+        <p class="square_row ltgreen_square">62<br /><span class="element_name">Sm</span><br />150.36</p>
+        <p class="square_row ltgreen_square">63<br /><span class="element_name">Eu</span><br />151.96</p>
+        <p class="square_row ltgreen_square">64<br /><span class="element_name">Gd</span><br />157.25</p>
+        <p class="square_row ltgreen_square">65<br /><span class="element_name">Tb</span><br />158.93</p>
+        <p class="square_row ltgreen_square">66<br /><span class="element_name">Dy</span><br />162.50</p>
+        <p class="square_row ltgreen_square">67<br /><span class="element_name">Ho</span><br />164.93</p>
+        <p class="square_row ltgreen_square">68<br /><span class="element_name">Er</span><br />167.26</p>
+        <p class="square_row ltgreen_square">69<br /><span class="element_name">Tm</span><br />168.93</p>
+        <p class="square_row ltgreen_square">70<br /><span class="element_name">Yb</span><br />173.05</p>
+        <p class="square_row green_square">89<br /><span class="element_name">Ac</span><br />[227.03]</p>
+        <p class="square_row green_square">90<br /><span class="element_name">Th</span><br />232.04</p>
+        <p class="square_row green_square">91<br /><span class="element_name">Pa</span><br />231.04</p>
+        <p class="square_row green_square">92<br /><span class="element_name">U</span><br />238.03</p>
+        <p class="square_row green_square">93<br /><span class="element_name">Np</span><br />[237.05]</p>
+        <p class="square_row green_square">94<br /><span class="element_name">Pu</span><br />[244.06]</p>
+        <p class="square_row green_square">95<br /><span class="element_name">Am</span><br />[243.06]</p>
+        <p class="square_row green_square">96<br /><span class="element_name">Cm</span><br />[247.07]</p>
+        <p class="square_row green_square">97<br /><span class="element_name">Bk</span><br />[247.07]</p>
+        <p class="square_row green_square">98<br /><span class="element_name">Cf</span><br />[251.08]</p>
+        <p class="square_row green_square">99<br /><span class="element_name">Es</span><br />[252.08]</p>
+        <p class="square_row green_square">100<br /><span class="element_name">Fm</span><br />[257.10]</p>
+        <p class="square_row green_square">101<br /><span class="element_name">Md</span><br />[258.10]</p>
+        <p class="square_row green_square">102<br /><span class="element_name">No</span><br />[259.10]</p>
+        <br />
+        <br />
+        <p class="data_example">This is a demo of ".data" by storing data.<br />
+          The value stored was:<br />
+          <span class="first"></span>
+        </p>
+        <br />
+        <p class="larger_font">This is a hide/show toggle button with slideUp and slideDown with if else logic.
+          Add Highlight button adds a highlight via "addClass"to last sentence and also "appends" an apology and a tiny "after" message</p>
+        <button class="define">Periodic Table of The Elements Definition</button>
+        <button class="addclass">Add Highlight</button>
+        <button class="var">Variable Example</button>
+
+        <p class="about">The periodic table is the most important chemistry reference there is. It arranges all the known elements in an informative array. Elements are arranged left to right and top to bottom in order of increasing atomic number. Order generally coincides with increasing atomic mass.</p>
+        <p class="about">The different rows of elements are called periods. The period number of an element signifies the highest energy level an electron in that element occupies (in the unexcited state). The number of electrons in a period increases as one traverses down the periodic table; therefore, as the energy level of the atom increases, the number of energy sub-levels per energy level increases.</p>
+        <p class="about">Using the data in the table scientists, students, and others that are familiar with the periodic table can extract information concerning individual elements. For instance, a scientist can use carbon's atomic mass to determine how many carbon atoms there are in a 1 kilogram block of carbon.</p>
+        <p class="about">People also gain information from the periodic table by looking at how it is put together. By examining an element's position on the periodic table, one can infer the electron configuration. Elements that lie in the same column on the periodic table (called a "group") have identical valance electron configurationsand consequently behave in a similar fashion chemically. For instance,
+        all the group 18 elements are inert gases. The periodic table contains an enormous amount of important information. People familiar with how the table is put together can quickly determine a significant amount of information about an element.(Source: Los Alamos National Labs)</p>
+        <p class="about last">This line will be highlighted by "adding a class" called highlight.</p>
+
+        <p class=variable>Once there was a <em title="brilliant,awesome">science</em> professor...<br />
+            this demonstrates "attr" and ".text" get and set. The title of the var emphasis is:</p>
+        <p class="emphasis"></p>
+      </div>
+  </body>
+</html>
