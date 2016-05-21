@@ -1,0 +1,64 @@
+body {
+font-family: FontAwesome,sans-serif;
+margin:0px;
+padding:0px;
+text-align: center;
+background-color: #000000;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("#{resource['font-awesome:fonts/fontawesome-webfont.eot']}&v=4.3.0");
+  src: url("#{resource['font-awesome:fonts/fontawesome-webfont.eot']}&#iefix&v=4.3.0") format('embedded-opentype'),
+       url("#{resource['font-awesome:fonts/fontawesome-webfont.woff2']}&v=4.3.0") format('woff2'),
+       url("#{resource['font-awesome:fonts/fontawesome-webfont.woff']}&v=4.3.0") format('woff'),
+       url("#{resource['font-awesome:fonts/fontawesome-webfont.ttf']}&v=4.3.0") format('truetype'),
+       url("#{resource['font-awesome:fonts/fontawesome-webfont.svg']}&v=4.3.0#fontawesomeregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+h1 {
+  font-size: 36px;
+  color:#FFFFFF;
+  text-align: center;
+  vertical-align: top;
+  margin:0px;
+}
+header p {
+  text-align: center;
+  color:#FFFFFF;
+}
+header {
+  height:auto;
+}
+#container {
+  display:block;
+  position:relative;
+  margin:auto;
+  background-image: linear-gradient(#404040,#D8D8D8);
+  vertical-align: top;
+}
+img {
+  display:inline-block;
+  position:relative;
+  width:490px;
+  height:320px;
+  border:8px solid white;
+  margin:10px;
+}
+.other {
+  display:inline-block;
+  font-size: 13px;
+  position:relative;
+  width:490px;
+  height:534px;
+  vertical-align: top;
+  margin:10px;
+  text-align: left;
+  overflow: auto;
+}
+a {
+  color:#FFFFFF;
+}
+a:hover {
+  color:#CCCCCC;
+}
