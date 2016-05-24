@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="description" content="BunnyMan game - hungry bunny eats carrots like PacMan">
+        <title>BunnyMan Game</title>
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <!--<link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.min.css" />-->
+        <script src="jquery-1.12.3.min.js"></script>
+        <!--<script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>-->
+        <script type="text/javascript">
+            $(document).ready(function(){
+              $('button.replay').click(function(){
+            location.reload();
+            })
+          });
+        </script>
+  </head>
+  <body>
+      <div id="container">
+      <div id="world"></div>
+      <div id="bunny"></div>
+      <div id="score">0</div>
+      <button class="replay">Start Over</button>
+      </div>
+
+      <script type="text/javascript">
+
+          var world = [
+            [2,2,2,2,2,2,2,2,2,2],
+            [2,1,1,1,1,2,1,1,1,2],
+            [2,2,2,2,1,2,1,1,1,2],
+            [2,1,1,1,1,2,1,1,1,2],
+            [2,2,2,1,2,2,2,1,2,2],
+            [2,1,2,1,1,1,2,1,1,2],
+            [2,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,2,1,1,2,1,2],
+            [2,2,2,2,2,2,2,2,2,2]
+          ];
+
+
+
+          function displayWorld(){
+            var output = '';
+
+            for(var i=0; i<world.length; i++){
+                output += "<div class='row'>";
+              for(var j=0; j<world[i].length; j++){
+                  if(world[i][j] == 2)
+                    output += "<div class='brick'></div>";
+                  else if(world[i][j] == 1)
+                    output += "<div class='coin'></div>";
+                  if(world[i][j] == 0)
+                    output += "<div class='empty'></div>";
+              }
+              output += "</div>";
+          }
+          //console.log(output);
+          document.getElementById('world').innerHTML = output;
+      }
+      var score= 0;
+
+      var bunny = {
+        x: 1,
+        y: 1
+      };
+          function displayBunny(){
+            document.getElementById("bunny").style.top = bunny.y*50+"px";
+            document.getElementById("bunny").style.left = bunny.x*50+"px";
+      }
+          function displayScore(){
+            document.getElementById("score").innerHTML = score;
+      }
+
+
+    displayWorld();
+    displayBunny();
+    displayScore();
+
+    document.onkeydown = function(e){
+              if(e.keyCode == 37 && world[bunny.y][bunny.x-1] != 2){
+                bunny.x --;
+              }
+              else if(e.keyCode ==39){
+                bunny.x ++;
+              }
+              else if(e.keyCode ==38){
+                bunny.y --;
+              }
+              else if(e.keyCode ==40){
+                bunny.y ++;
+              }
+              if(world[bunny.y][bunny.x] ==1){
+                world[bunny.y][bunny.x] = 0;
+                score+=10;
+                displayWorld();
+                displayScore();
+              }
+              //console.log(e.keyCode);
+
+      displayBunny();
+
+            }
+      </script>
+  </body>
+</html>
