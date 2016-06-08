@@ -1,0 +1,85 @@
+body {
+  margin-left: 50px;
+}
+  p {
+  font-family:sans-serif;
+  margin: 20px;
+}
+  #square {
+  width:140px;
+  height:140px;
+  background: blue;
+  margin: 20px;
+}
+  #white_square {
+  width:140px;
+  height:140px;
+  background: #FFFFFF;
+  margin: -210px 10px 10px 110px;
+  z-index: 10;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Safari */
+  transform: rotate(45deg);
+  }
+  #circle {
+  width: 200px;
+  height: 200px;
+  background: blue;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  margin: 20px;
+  }
+  #circle_pacman {
+  width: 200px;
+  height: 200px;
+  background: blue;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  margin-left: 0px;
+  margin-bottom: 40px;
+  z-index: 5;
+  }
+  #triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid blue;
+  margin: 20px;
+  }
+  #pac-man {
+    width: 0px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-top: 60px solid blue;
+    border-left: 60px solid blue;
+    border-bottom: 60px solid blue;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    margin: 20px;
+  }
+  div.polaroid {
+    width: 294px;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+  div.rotate_right {
+    float: left;
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Safari */
+    transform: rotate(7deg);
+}
+
+  div.rotate_left {
+    float: left;
+    -ms-transform: rotate(-8deg); /* IE 9 */
+    -webkit-transform: rotate(-8deg); /* Safari */
+    transform: rotate(-8deg);
+}
