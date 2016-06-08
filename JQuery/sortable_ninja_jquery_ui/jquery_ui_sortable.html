@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="description" content="Jquery accordion and tab example">
+        <title>Jquery UI Accordion and Tab</title>
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.min.css" />
+        <script src="jquery-1.12.3.min.js"></script>
+        <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+        $(function() {
+          $( "#sortable" ).sortable();
+          $( "#sortable" ).disableSelection();
+        });
+        </script>
+  </head>
+  <body>
+      <ul id="sortable">
+        <li><img class="ninja0" src="images/ninja0.png" alt="ninja0 image"></li>
+        <li><img src="images/ninja1.png" alt="ninja1 image"></li>
+        <li><img src="images/ninja2.png" alt="ninja2 image"></li>
+        <li><img src="images/ninja3.png" alt="ninja3 image"></li>
+        <li><img src="images/ninja4.png" alt="ninja4 image"></li>
+      </ul>
+  </body>
+</html>
