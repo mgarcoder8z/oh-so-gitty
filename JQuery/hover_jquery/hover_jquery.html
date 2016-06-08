@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="description" content="jQuery hover assignment for week 2">
+    <title>JQuery Hover Assignment - replaces photo on hover</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/hover.css">
+    <!-- Latest compiled and minified CSS -->
+
+    <script src="jquery-1.12.3.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+          var sourceSwap = function(){
+            var $this = $(this);
+            var newSource = $this.data('alt-src');
+            $this.data('alt-src', $this.attr('src'));
+            $this.attr('src', newSource);
+          }
+            $(function(){
+              $('img.xyz').hover(sourceSwap, sourceSwap);
+        })
+      });
+    </script>
+  </head>
+  <body>
+      <!--example of swapping out one src for another using jquery-->
+      <h1>Hover over each box to reveal the alternate ninja image.</h1>
+      <p>Demonstrates the jquery script that swaps out images on hover.</p>
+
+      <div id="container"><!--Start Container-->
+          <div class="box0">
+              <img class="xyz" data-alt-src="images/ninja0.png" src="images/cat0.png" alt="ninja0 image swapped with cat0 on hover">
+          </div>
+          <div class="box1">
+              <img class="xyz" data-alt-src="images/ninja1.png" src="images/cat1.png" alt="ninja0 image swapped with cat0 on hover">
+          </div>
+          <div class="box2">
+              <img class="xyz" data-alt-src="images/ninja2.png" src="images/cat2.png" alt="ninja0 image swapped with cat0 on hover">
+          </div>
+          <div class="box3">
+              <img class="xyz" data-alt-src="images/ninja3.png" src="images/cat3.png" alt="ninja0 image swapped with cat0 on hover">
+          </div>
+          <div class="box4">
+              <img class="xyz" data-alt-src="images/ninja4.png" src="images/cat4.png" alt="ninja0 image wapped with cat0 on hover">
+          </div>
+      </div><!--End Container-->
+  </body>
+</html>
