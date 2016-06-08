@@ -1,0 +1,17 @@
+body {
+  background-color: #000000;
+  margin: 20px;
+  padding:10px;
+  color: #FFFFFF;
+}
+p {
+  display:inline-block;
+  width: 800px;
+}
+img {
+  display:inline-block;
+  width: 400px;
+  height:310px;
+  position:relative;
+  border:2px solid gray;
+}
