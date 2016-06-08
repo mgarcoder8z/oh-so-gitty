@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6313647E1CB30DB800F1293F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313647D1CB30DB800F1293F /* main.m */; };
+		631364811CB30DB800F1293F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 631364801CB30DB800F1293F /* AppDelegate.m */; };
+		631364841CB30DB800F1293F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631364831CB30DB800F1293F /* ViewController.m */; };
+		631364871CB30DB900F1293F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631364851CB30DB900F1293F /* Main.storyboard */; };
+		631364891CB30DB900F1293F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631364881CB30DB900F1293F /* Assets.xcassets */; };
+		6313648C1CB30DB900F1293F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6313648A1CB30DB900F1293F /* LaunchScreen.storyboard */; };
+		631364971CB30DB900F1293F /* MarcoPolloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 631364961CB30DB900F1293F /* MarcoPolloTests.m */; };
+		631364A21CB30DB900F1293F /* MarcoPolloUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 631364A11CB30DB900F1293F /* MarcoPolloUITests.m */; };
+		63AD241D1CB42CC200767FF3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD241C1CB42CC200767FF3 /* Social.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		631364931CB30DB900F1293F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 631364711CB30DB800F1293F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 631364781CB30DB800F1293F;
+			remoteInfo = MarcoPollo;
+		};
+		6313649E1CB30DB900F1293F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 631364711CB30DB800F1293F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 631364781CB30DB800F1293F;
+			remoteInfo = MarcoPollo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		631364791CB30DB800F1293F /* MarcoPollo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarcoPollo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6313647D1CB30DB800F1293F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6313647F1CB30DB800F1293F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		631364801CB30DB800F1293F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		631364821CB30DB800F1293F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		631364831CB30DB800F1293F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		631364861CB30DB900F1293F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		631364881CB30DB900F1293F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6313648B1CB30DB900F1293F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6313648D1CB30DB900F1293F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		631364921CB30DB900F1293F /* MarcoPolloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarcoPolloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		631364961CB30DB900F1293F /* MarcoPolloTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarcoPolloTests.m; sourceTree = "<group>"; };
+		631364981CB30DB900F1293F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6313649D1CB30DB900F1293F /* MarcoPolloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarcoPolloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		631364A11CB30DB900F1293F /* MarcoPolloUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarcoPolloUITests.m; sourceTree = "<group>"; };
+		631364A31CB30DB900F1293F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63AD241C1CB42CC200767FF3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		631364761CB30DB800F1293F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63AD241D1CB42CC200767FF3 /* Social.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6313648F1CB30DB900F1293F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6313649A1CB30DB900F1293F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		631364701CB30DB800F1293F = {
+			isa = PBXGroup;
+			children = (
+				63AD241C1CB42CC200767FF3 /* Social.framework */,
+				6313647B1CB30DB800F1293F /* MarcoPollo */,
+				631364951CB30DB900F1293F /* MarcoPolloTests */,
+				631364A01CB30DB900F1293F /* MarcoPolloUITests */,
+				6313647A1CB30DB800F1293F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6313647A1CB30DB800F1293F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				631364791CB30DB800F1293F /* MarcoPollo.app */,
+				631364921CB30DB900F1293F /* MarcoPolloTests.xctest */,
+				6313649D1CB30DB900F1293F /* MarcoPolloUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6313647B1CB30DB800F1293F /* MarcoPollo */ = {
+			isa = PBXGroup;
+			children = (
+				6313647F1CB30DB800F1293F /* AppDelegate.h */,
+				631364801CB30DB800F1293F /* AppDelegate.m */,
+				631364821CB30DB800F1293F /* ViewController.h */,
+				631364831CB30DB800F1293F /* ViewController.m */,
+				631364851CB30DB900F1293F /* Main.storyboard */,
+				631364881CB30DB900F1293F /* Assets.xcassets */,
+				6313648A1CB30DB900F1293F /* LaunchScreen.storyboard */,
+				6313648D1CB30DB900F1293F /* Info.plist */,
+				6313647C1CB30DB800F1293F /* Supporting Files */,
+			);
+			path = MarcoPollo;
+			sourceTree = "<group>";
+		};
+		6313647C1CB30DB800F1293F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6313647D1CB30DB800F1293F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		631364951CB30DB900F1293F /* MarcoPolloTests */ = {
+			isa = PBXGroup;
+			children = (
+				631364961CB30DB900F1293F /* MarcoPolloTests.m */,
+				631364981CB30DB900F1293F /* Info.plist */,
+			);
+			path = MarcoPolloTests;
+			sourceTree = "<group>";
+		};
+		631364A01CB30DB900F1293F /* MarcoPolloUITests */ = {
+			isa = PBXGroup;
+			children = (
+				631364A11CB30DB900F1293F /* MarcoPolloUITests.m */,
+				631364A31CB30DB900F1293F /* Info.plist */,
+			);
+			path = MarcoPolloUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		631364781CB30DB800F1293F /* MarcoPollo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 631364A61CB30DB900F1293F /* Build configuration list for PBXNativeTarget "MarcoPollo" */;
+			buildPhases = (
+				631364751CB30DB800F1293F /* Sources */,
+				631364761CB30DB800F1293F /* Frameworks */,
+				631364771CB30DB800F1293F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarcoPollo;
+			productName = MarcoPollo;
+			productReference = 631364791CB30DB800F1293F /* MarcoPollo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		631364911CB30DB900F1293F /* MarcoPolloTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 631364A91CB30DB900F1293F /* Build configuration list for PBXNativeTarget "MarcoPolloTests" */;
+			buildPhases = (
+				6313648E1CB30DB900F1293F /* Sources */,
+				6313648F1CB30DB900F1293F /* Frameworks */,
+				631364901CB30DB900F1293F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				631364941CB30DB900F1293F /* PBXTargetDependency */,
+			);
+			name = MarcoPolloTests;
+			productName = MarcoPolloTests;
+			productReference = 631364921CB30DB900F1293F /* MarcoPolloTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6313649C1CB30DB900F1293F /* MarcoPolloUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 631364AC1CB30DB900F1293F /* Build configuration list for PBXNativeTarget "MarcoPolloUITests" */;
+			buildPhases = (
+				631364991CB30DB900F1293F /* Sources */,
+				6313649A1CB30DB900F1293F /* Frameworks */,
+				6313649B1CB30DB900F1293F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6313649F1CB30DB900F1293F /* PBXTargetDependency */,
+			);
+			name = MarcoPolloUITests;
+			productName = MarcoPolloUITests;
+			productReference = 6313649D1CB30DB900F1293F /* MarcoPolloUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		631364711CB30DB800F1293F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "m garabedian";
+				TargetAttributes = {
+					631364781CB30DB800F1293F = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					631364911CB30DB900F1293F = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 631364781CB30DB800F1293F;
+					};
+					6313649C1CB30DB900F1293F = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 631364781CB30DB800F1293F;
+					};
+				};
+			};
+			buildConfigurationList = 631364741CB30DB800F1293F /* Build configuration list for PBXProject "MarcoPollo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 631364701CB30DB800F1293F;
+			productRefGroup = 6313647A1CB30DB800F1293F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				631364781CB30DB800F1293F /* MarcoPollo */,
+				631364911CB30DB900F1293F /* MarcoPolloTests */,
+				6313649C1CB30DB900F1293F /* MarcoPolloUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		631364771CB30DB800F1293F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6313648C1CB30DB900F1293F /* LaunchScreen.storyboard in Resources */,
+				631364891CB30DB900F1293F /* Assets.xcassets in Resources */,
+				631364871CB30DB900F1293F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		631364901CB30DB900F1293F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6313649B1CB30DB900F1293F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		631364751CB30DB800F1293F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				631364841CB30DB800F1293F /* ViewController.m in Sources */,
+				631364811CB30DB800F1293F /* AppDelegate.m in Sources */,
+				6313647E1CB30DB800F1293F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6313648E1CB30DB900F1293F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				631364971CB30DB900F1293F /* MarcoPolloTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		631364991CB30DB900F1293F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				631364A21CB30DB900F1293F /* MarcoPolloUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		631364941CB30DB900F1293F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 631364781CB30DB800F1293F /* MarcoPollo */;
+			targetProxy = 631364931CB30DB900F1293F /* PBXContainerItemProxy */;
+		};
+		6313649F1CB30DB900F1293F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 631364781CB30DB800F1293F /* MarcoPollo */;
+			targetProxy = 6313649E1CB30DB900F1293F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		631364851CB30DB900F1293F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				631364861CB30DB900F1293F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6313648A1CB30DB900F1293F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6313648B1CB30DB900F1293F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		631364A41CB30DB900F1293F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		631364A51CB30DB900F1293F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		631364A71CB30DB900F1293F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MarcoPollo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Class-Prefix.MarcoPollo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		631364A81CB30DB900F1293F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MarcoPollo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Class-Prefix.MarcoPollo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		631364AA1CB30DB900F1293F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MarcoPolloTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Class-Prefix.MarcoPolloTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarcoPollo.app/MarcoPollo";
+			};
+			name = Debug;
+		};
+		631364AB1CB30DB900F1293F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MarcoPolloTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Class-Prefix.MarcoPolloTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarcoPollo.app/MarcoPollo";
+			};
+			name = Release;
+		};
+		631364AD1CB30DB900F1293F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MarcoPolloUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Class-Prefix.MarcoPolloUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MarcoPollo;
+			};
+			name = Debug;
+		};
+		631364AE1CB30DB900F1293F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MarcoPolloUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Class-Prefix.MarcoPolloUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MarcoPollo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		631364741CB30DB800F1293F /* Build configuration list for PBXProject "MarcoPollo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				631364A41CB30DB900F1293F /* Debug */,
+				631364A51CB30DB900F1293F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		631364A61CB30DB900F1293F /* Build configuration list for PBXNativeTarget "MarcoPollo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				631364A71CB30DB900F1293F /* Debug */,
+				631364A81CB30DB900F1293F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		631364A91CB30DB900F1293F /* Build configuration list for PBXNativeTarget "MarcoPolloTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				631364AA1CB30DB900F1293F /* Debug */,
+				631364AB1CB30DB900F1293F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		631364AC1CB30DB900F1293F /* Build configuration list for PBXNativeTarget "MarcoPolloUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				631364AD1CB30DB900F1293F /* Debug */,
+				631364AE1CB30DB900F1293F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 631364711CB30DB800F1293F /* Project object */;
+}
