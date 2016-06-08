@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="description" content="Jquery date validator">
+        <title>Jquery date validator - Coding Dojo - Week2</title>
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.min.css" />
+        <script src="jquery-1.12.3.min.js"></script>
+        <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+                $(function() {
+                $( "#datepicker_from" ).datepicker();
+                $( "#datepicker_to" ).datepicker();
+                });
+
+                $('#myform').on('submit',(function(){
+                var startDate = $( "#datepicker_from" ).val();
+                var endDate = $("#datepicker_to").val();
+                var name = $("#name").val();
+                  if((name=="") || //no names, alert.
+                     (name=="")){
+                      alert('Name is Required');
+                      return false;
+                    }
+                  }))
+                $(this).on('click','button',function(){
+                  var startDate = $( "#datepicker_from" ).val();
+                  var endDate = $("#datepicker_to").val();
+                  var name = $("#name").val();
+                    alert('Thank you '+name+', your cruise leaves on '+startDate+' and ends on '+endDate+'');
+                  })
+                  return false;
+                });
+        </script>
+  </head>
+  <body>
+
+      <h1>Welcome to the Codingdojo Plan-A-Cruise!</h1>
+
+      <form>
+        <p>Select a date for your cruise (* Required Field)</p>
+        <input type="text" placeholder="From" id="datepicker_from" class="from_date">
+        <input type="text" placeholder="To" id="datepicker_to" class="to_date">
+        <input type="text" placeholder="Name" id="name" required>
+        <button>Check Dates</button>
+      </form>
+
+      <img src="ship.png" alt="photo of a Carnival cruise ship">
+  </body>
+</html>
