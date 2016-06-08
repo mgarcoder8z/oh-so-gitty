@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="robots" content="noindex">
+      <meta name="description" content="Jquery accordion and tab example">
+      <title>Jquery UI Accordion and Tab</title>
+      <link rel="stylesheet" href="css/normalize.css" />
+      <link rel="stylesheet" href="css/styles.css" />
+      <link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.theme.min.css" />
+      <link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.min.css" />
+      <script src="jquery-1.12.3.min.js"></script>
+      <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+      <script type="text/javascript">
+      $(function() {
+        $( "#accordion" ).accordion();
+      })
+      $(function() {
+        $( "#tabs" ).tabs();
+      })
+      $(function() {
+        $( "#datepicker" ).datepicker();
+    });
+  </script>
+</head>
+<body>
+  <h1>JQuery Accordion and Tabs Example</h1>
+  <div id="accordion">
+    <h3>Cakes</h3>
+    <div>
+      <p>
+      Our master pastry chefs can create any cake for your special occasions or just a sweet treat
+      for any event or need. Just let us know what cake size, frosting type, filling choice and decorating
+      idea and we can make any custom cake.
+      </p>
+      <img src="images/choc_cake.jpeg" alt="flourless chocolate cake">
+      <ul>
+        <li>Everyday Cakes</li>
+        <li>Layer Cakes</li>
+        <li>Special Occasion</li>
+      </ul>
+    </div>
+    <h3>Cookies</h3>
+    <div>
+      <p>
+      Select from a wide variety of cookies from chocolate chunk, peanut butter, s'mores, linzer and more. Always freshly-baked
+      and can be shipped anywhere in the U.S.
+      </p>
+    </div>
+    <h3>Quick Breads and Scones</h3>
+    <div>
+      <p>
+      Our delicious buttermilk scones make a great accompaniment to afternoon tea or a quick treat for breakfast with your coffee.
+      The quick breads are made with the finest ingredients and are moist not dry and can be easily sliced or frozen for longer storage.
+      </p>
+      <ul>
+        <li>Banana Bread</li>
+        <li>Lemon Blueberry</li>
+        <li>Pumpkin</li>
+        <li>Apple Cinnamon</li>
+      </ul>
+    </div>
+    <h3>Desserts</h3>
+    <div>
+      <p>
+      Sometimes you want something sweet that doesn't require baking or wish to bring a treat to a party without a lot of work.
+      Chocolate covered strawberries are easy to make and look impressive on a dessert buffet. Flourless Chocolate Cake is elegant
+      and easy to make with just a few ingredients you probably already have at home.
+      </p>
+      <img src="images/petit_fours.jpeg" alt="petit fours on a tiered stand">
+    </div>
+  </div>
+  <div id="tabs">
+      <ul>
+        <li><a href="#tabs-1">Locations</a></li>
+        <li><a href="#tabs-2">Careers</a></li>
+        <li><a href="#tabs-3">Testimonials</a></li>
+      </ul>
+      <div id="tabs-1">
+        <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+      </div>
+      <div id="tabs-2">
+        <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+      </div>
+      <div id="tabs-3">
+        <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+        <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+      </div>
+    </div>
+  <div id="tabs-4">
+    <p>Select a Date:</p>
+    <form>
+      <input type="text" name="Date" id="datepicker" placeholder="View Calendar">
+    </form>
+  </div>
+</div>
+</html>

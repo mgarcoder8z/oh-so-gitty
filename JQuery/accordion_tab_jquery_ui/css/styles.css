@@ -1,0 +1,9 @@
+body {
+  margin:20px;
+  padding: 20px;
+}
+#accordion {
+  width: 500px;
+  margin:20px;
+  padding:10px;
+}
