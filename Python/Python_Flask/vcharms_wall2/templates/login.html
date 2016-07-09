@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="description" content="VirtualCharms.com - A fun way to collect and share virtual charms with your friends">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>VirtualCharms.com</title>
+
+  <!-- CSS  -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/materialize.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome/fontawesome-webfont.svg') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome/fontawesome-webfont.eot') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome/fontawesome-webfont.ttf') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome/fontawesome-webfont.woff') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome/fontawesome-webfont.woff2') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome/FontAwesome.otf') }}">
+
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='font/material-design-icons/Material-Design-Icons.svg') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='font/material-design-icons/Material-Design-Icons.woff2') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='font/material-design-icons/Material-Design-Icons.woff') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='font/material-design-icons/Material-Design-Icons.ttf') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='font/material-design-icons/Material-Design-Icons.eot') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/roboto/Roboto-Bold.woff2') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/roboto/Roboto-Light.woff2') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/roboto/Roboto-Regular.woff2') }}">
+
+
+
+  <!--  Scripts-->
+  <script src="{{ url_for('static', filename='js/jquery-1.12.3.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/init.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo teal-text">VirtualCharms.com</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="/logout">Logout</a></li>
+          </ul>
+          <ul id="nav-mobile" class="side-nav">
+            <li><a href="#">Navbar Link</a></li>
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div class="container">
+      <div class="section">
+          <div class="row">
+              <div class="col s12 m12">
+                   <h1 class="header left black-text text-lighten-2"></h1>
+                    <h5>Welcome! {{ session['email']}}. You are logged in</h5>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 m12">
+          <div class="icon-block">
+            <h3 class="center teal-text">Post a Message</h3>
+                <form action='/messages' method='post'>
+                    <label for="message">Post a message</label>
+                    <textarea name="message" cols="40" rows="20"></textarea>
+                    <button type="submit">Post</button>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 left">
+            <h4 class="center teal-text">Messages and Comments</h4>
+            {% for msg in all_messages %}
+                    <h5 class="panel-title">{{ msg.author_name }} - {{ msg.created_at.strftime('%B %d, %Y') }}</h5>
+                    {{ msg.message }}
+                        {% for idx in range(msg.comments|length) %}
+                            {% if msg.comments[idx] != 'None' %}
+                                <p>{{ msg.comment_author[idx] }} - {{ msg.comments[idx] }}</p>
+                            {% endif %}
+                        {% endfor %}
+                    <form action='/comments' method='post'>
+                        <label for="comment">Post a comment</label>
+                        <input type="hidden" name="message_id" value="{{ msg.message_id }}">
+                        <textarea name="comment" cols="40" rows="20"></textarea>
+                        <button type="submit">Comment</button>
+                    </form>
+
+                    <form action="/messages/{{ msg.message_id }}/edit">
+                        <input type="submit" value="Edit">
+                    </form>
+
+                    <form action="/messages/{{ msg.message_id }}/delete" method="POST">
+                        <input type="submit" value="Delete">
+                    </form>
+            {% endfor %}
+                </div>
+             </div>
+         </div>
+    </div>
+
+
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="white-text">Why Virtual Charms</h5>
+                      <p class="grey-text text-lighten-4">Sometimes we want a keepsake to collect that doesn't clutter or collect dust, or wish to express thanks, good wishes or good luck to our friends and family near and far. What better way than a virtual charm
+                      that's easy to create and share online. Who would you like to send a charm to?  The possibilities are endless...</p>
+                </div>
+            <div class="col l3 s12">
+                  <h5 class="white-text">Contact</h5>
+                      <ul>
+                        <li><a class="white-text" href="#!">Tutorial</a></li>
+                        <li><a class="white-text" href="#!">Press</a></li>
+                        <li><a class="white-text" href="#!">Support</a></li>
+                      </ul>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Connect</h5>
+                      <ul>
+                        <li><a class="white-text" href="#!">Facebook</a></li>
+                        <li><a class="white-text" href="#!">Twitter</a></li>
+                        <li><a class="white-text" href="#!">Pinterest</a></li>
+                      </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <div class="container">
+          Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        </div>
+    </div>
+      </footer>
+  </body>
+</html>

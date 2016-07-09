@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="description" content="VirtualCharms.com - A fun way to collect and share virtual charms with your friends">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>VirtualCharms.com</title>
+
+  <!-- CSS  -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/materialize.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome/fontawesome-webfont.svg') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome/fontawesome-webfont.eot') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome/fontawesome-webfont.ttf') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome/fontawesome-webfont.woff') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome/fontawesome-webfont.woff2') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome/FontAwesome.otf') }}">
+
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='font/material-design-icons/Material-Design-Icons.svg') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='font/material-design-icons/Material-Design-Icons.woff2') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='font/material-design-icons/Material-Design-Icons.woff') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='font/material-design-icons/Material-Design-Icons.ttf') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='font/material-design-icons/Material-Design-Icons.eot') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/roboto/Roboto-Bold.woff2') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/roboto/Roboto-Light.woff2') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/roboto/Roboto-Regular.woff2') }}">
+
+
+
+  <!--  Scripts-->
+  <script src="{{ url_for('static', filename='js/jquery-1.12.3.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/init.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo teal-text">VirtualCharms.com</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#How">SignUp</a></li>
+        <li><a href="#How">Login</a></li>
+      </ul>
+
+      <!--<ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>-->
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <!--<h1 class="header center white-text text-lighten-2">Create, Share &amp; Collect Charms</h1>-->
+        <div class="row left">
+            <h3 class="header col s12 light">A fun way to <br>collect and share <br>virtual charms <br>with your friends</h3>
+          <a href="#How" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+        </div>
+      </div>
+    </div>
+  <div class="parallax">
+      <img src="{{ url_for('static', filename='img/two_women_cellphone.jpg')}}" alt="Two women sharing on a cellphone"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h4 class="center teal-text">Create Your Own</h4>
+            <p class="light">Choose a design from one of our libraries or design your own charm from a JPEG or PNG file.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h4 class="center teal-text">Share With Friends</h4>
+            <p class="light">Share charms with your friends to wish them luck, for special occasions, or just to let them know you are thinking of them.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h4 class="center teal-text">Collect Them</h4>
+            <p class="light">We will be featuring new and limited edition sets each month so you can add to your collection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h3 class="header col s12">Sending virtual charms last longer than sending flowers</h3>
+        </div>
+      </div>
+    </div>
+        <div class="parallax"><img src="{{ url_for('static', filename='img/flowers2.jpg') }}" alt="Image of a colorful bouquet of flowers">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <div class="row">
+
+        <div class="col s12 center">
+            <h3 id="How">How it Works</h3>
+              <div class="col s12 m4">
+                <div class="icon-block">
+
+                  <img src="{{ url_for('static', filename='img/small_charm3.png') }}" alt="charm image">
+                  <h4 class="center">Choose a Design</h4>
+                  <p class="left-align light">
+                    Choose a charm design from our collection or use your photo or image and paste it into a shape. Write a message to personalize the charm.</p>
+                </div>
+              </div>
+        <div class="col s12 m4">
+            <div class="icon-block">
+                <img src="{{ url_for('static', filename='img/necklace_w_charms.png') }}" alt="necklace with charms image">
+                <h4 class="center">Share or Send</h4>
+                <p class="left-align light">
+                  Share your design or charm collection with others via a shared link or send someone a personalized charm.</p>
+            </div>
+        </div>
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <img src="{{ url_for('static', filename='img/necklace.png') }}" alt="necklace image">
+                <h4 class="center">Collect Them</h4>
+                <p class="left-align light">
+                There are two ways to display your favorite charms. Display them on a virtual bracelet or you can display your
+                collection in a gallery.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="icon-block2">
+              <h4 class="center teal-text" id="Signup">Sign Up Now</h4>
+                  <p class="center light">Register today and start creating and sharing virtual charms!</p>
+                      {% with messages = get_flashed_messages(with_categories=true) %}
+                          {% if messages %}
+                          <ul>
+                              {% for category, message in messages %}
+                                  <li class="{{ category }}">{{ message }}</li>
+                              {% endfor %}
+                          </ul>
+                          {% endif %}
+                      {% endwith %}
+                  <form action='/users' method='POST'>
+                    <label for="first_name">First Name:<input type="text" name="first_name" id="first_name" placeholder="First Name"></label>
+                    <label for="last_name">Last Name:<input type="text" name="last_name" id="last_name" placeholder="Last Name"></label>
+                    <label for="email">Email:<input type="email" name="email" id="email" placeholder="email@domain.com"></label>
+                    <label for="password">Password:<input type="password" name="password" id="password" placeholder="Enter password"></label>
+                    <label for="confirm">Confirm Password:<input type="password" name="confirm" id="confirm" placeholder="Confirm password"></label>
+                    <input type="submit" value="Sign Up">
+                  </form>
+              </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="icon-block2">
+                <h4 class="center teal-text" id="Login">Login</h4>
+                    <p class="center light">Current users can login here.</p>
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                        <ul>
+                            {% for category, message in messages %}
+                                <li class="{{ category }}">{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    {% endwith %}
+                    <form action='/login' method='POST'>
+                      <label for="email">Email:<input type="email" name="email" id="email" placeholder="email@domain.com"></label>
+                      <label for="password">Password:<input type="password" name="password" id="password" placeholder="Enter user password"></label>
+                      <input type="submit" value="Login">
+                    </form>
+
+                    <h4 class="center teal-text">What can I do if I login?</h4>
+                    <p>Once you login, you can start creating and sharing your own virtual charms using standard design tools. You can import photos or designs or use the ones from our collections. Get Started Today!</p>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+          <div class="row center">
+            <h3 class="header white-text col s12">Easily Send Charms Anywhere to Brighten Someone's Day.</h3>
+          </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="{{ url_for('static', filename='img/misc_charms3.jpg') }}" alt="Cityscape"></div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Why Virtual Charms</h5>
+          <p class="grey-text text-lighten-4">Sometimes we want a keepsake to collect that doesn't clutter or collect dust, or wish to express thanks, good wishes or good luck to our friends and family near and far. What better way than a virtual charm
+          that's easy to create and share online. Who would you like to send a charm to?  The possibilities are endless...</p>
+
+
+        </div>
+        <div class="col l3 s6">
+          <h5 class="white-text">Contact</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Tutorial</a></li>
+            <li><a class="white-text" href="#!">Press</a></li>
+            <li><a class="white-text" href="#!">Support</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s6">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Facebook</a></li>
+            <li><a class="white-text" href="#!">Twitter</a></li>
+            <li><a class="white-text" href="#!">Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  </body>
+</html>
