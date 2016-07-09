@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/my_style_sheet.css') }}">
+        <title>Friends</title>
+    </head>
+    <body>
+        <section>
+            <img src="{{ url_for('static', filename='img/hogwarts.jpeg')}}">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                <ul>
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            {% endwith %}
+            <h1>Add a Friend</h1>
+                <form action='/friends' method='POST'>
+                  <label for="first_name">First Name:<input type="text" name="first_name" id="first_name"></label>
+                  <label for="last_name">Last Name:<input type="text" name="last_name" id="last_name"></label>
+                  <label for="occupation">Occupation:<input type="text" name="occupation" id="occupation"></label>
+                  <input type="submit" value="Add">
+                </form>
+                <hr>
+
+        {% if all_friends %}
+            <h1>List of Friends at Hogwarts</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Occupation</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for friend in all_friends: %}
+                        <tr>
+                            <td>{{ friend['first_name'] }}</td>
+                            <td>{{ friend['last_name'] }}</td>
+                            <td>{{ friend['occupation'] }}</td>
+                            <td>
+                                <form action="/friends/{{ friend['id'] }}/edit">
+								    <input type="submit" value="Edit">
+							    </form>
+                            </td>
+                            <td>
+                                <form action="/friends/{{ friend['id'] }}/delete" method="POST">
+								    <input type="submit" value="Delete">
+							    </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+            {% endif %}
+        </section>
+    </body>
+</html>
