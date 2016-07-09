@@ -1,0 +1,39 @@
+<html>
+    <head>
+       <title>Dojo Survey</title>
+       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/my_style_sheet.css') }}">
+    </head>
+    <body>
+      <h1>Dojo Survey</h1>
+
+        <div>
+          <fieldset style="background-color: #F0FFF0;">
+            <legend>Create a User</legend>
+              <form action='/user' method='post'>
+                  <label>Name:</label>
+                  <input type='text' name='name' placeholder='Name'></label><br>
+
+                  <label>Dojo Location:</label><br>
+                    <select name='location' size="8">
+                        <option value="Seattle">Seattle</option>
+                        <option value="Los Angeles">Los Angeles</option>
+                        <option value="Washington, DC">Washington, DC</option>
+                        <option value="Online">Online</option>
+                    </select><br>
+
+                  <label>Favorite Language:</label><br>
+                    <select name='language' size="6">
+                        <option value="C">C-Language</option>
+                        <option value="Python">Python</option>
+                        <option value="Javascript">Javascript</option>
+                        <option value="Objective-C">Objective-C</option>
+                    </select><br>
+
+                  <label>Comments:</label><br>
+                    <textarea name='comments' cols="50" rows="5"></textarea><br>
+                    <input type='submit' value='create user'>
+              </form>
+          </fieldset>
+        </div>
+    </body>
+</html>

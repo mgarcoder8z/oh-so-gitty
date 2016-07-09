@@ -1,0 +1,16 @@
+<html>
+    <head>
+       <title>Dojo Survey</title>
+       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/my_style_sheet.css') }}">
+    </head>
+    <body>
+      <h1>Submitted Info:</h1>
+      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+
+            <p>Name:<br>session{{['name']}}</p>
+            <p>Location:<br>session{{['location']}}</p>
+            <p>Favorite Language:<br>session{{['language']}}</p>
+            <p>Comments:<br>session{{['comments']}}</p>
+
+    </body>
+</html>

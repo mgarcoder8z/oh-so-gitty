@@ -1,0 +1,77 @@
+body {
+font-family: sans-serif;
+}
+
+h1, h2 {
+color: blue;
+text-align: center;
+}
+p {
+text-align: center;
+}
+img {
+display: block;
+width:auto;
+height:auto;
+margin:auto;
+}
+div {
+display:block;
+width: 700px;
+height:auto;
+border: 1px solid black;
+border-radius: 10px;
+padding: 10px;
+margin: auto;
+}
+.message {
+display:inline-block;
+width: 200px;
+height: 200px;
+background-color: red;
+color: white;
+font-size: 18px;
+text-align: center;
+margin:auto;
+vertical-align: middle;
+}
+.message2 {
+display:inline-block;
+width: 150px;
+height: 150px;
+background-color: green;
+color: white;
+font-size: 18px;
+text-align: center;
+vertical-align: middle;
+margin:auto;
+}
+.results {
+display:inline-block;
+width: 270px;
+margin-left: 0px;
+text-align: left;
+border:none;
+}
+form {
+vertical-align: top;
+margin:10px;
+padding:10px;
+}
+fieldset {
+border: 1px solid #dcdcdc;
+border-radius: 10px;
+padding: 10px;
+}
+legend {
+background-color: #efefef;
+border: 1px solid #dcdcdc;
+text-align: center;
+text-transform: uppercase;
+}
+.win {
+color:green;
+}
+.lose {
+color:red;
+}
