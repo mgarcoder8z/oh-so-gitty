@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+          <title>Disappearing Ninja</title>
+          <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/my_style_sheet.css') }}">
+    </head>
+    <body>
+            {% if displayAll ==True %}
+                <img src="{{ url_for('static', filename='img/all_turtles.png')}}">
+            {% endif %}
+
+            {% if displayAll ==False %}
+            {% if color == 'blue' %}:
+                <h2>I am Leonardo</h2>
+                <img src="{{ url_for('static', filename='img/leonardo.jpg')}}">
+
+            {% elif color == 'orange' %}
+                <h2>I am Michelangelo</h2>
+                <img src="{{ url_for('static', filename='img/michelangelo.jpg')}}">
+
+            {% elif color == 'purple' %}
+                <h2>I am Donatello</h2>
+                <img src="{{ url_for('static', filename='img/donatello.jpg')}}">
+
+            {% elif color == 'red' %}
+                <h2>I am Raphael</h2>
+                <img src="{{ url_for('static', filename='img/raphael.jpg')}}">
+
+            {% else %}
+                <h2>No Ninja Turtles Here</h2>
+                <img src="{{ url_for('static', filename='img/notapril.jpg')}}">
+            {% endif %}
+        {% endif %}
+    </body>
+</html>
