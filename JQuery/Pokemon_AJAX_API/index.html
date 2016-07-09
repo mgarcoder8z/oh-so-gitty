@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="description" content="Pokemon AJAX JQuery Wall">
+        <title>Pokemon Wall with AJAX and JQuery</title>
+
+        <!--scripts here -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+    				var pokemon_data = '';
+    				var pokemon = '';
+    				for(var i = 1;i < 152; i++)	{
+    					pokemon += "<img id='"+i+"'src='http://pokeapi.co/media/img/"+ i +".png'>";
+    				}
+    				//display all pokemon images
+    				$('#pokemon_wall').html(pokemon);
+                })
+
+        </script>
+<style>
+        #pokemon_wall {
+        width: auto;
+        display:inline-block;
+        }
+</style>
+    </head>
+
+    <body>
+        <div id="pokemon_wall">
+        </div>
+    </body>
+</html>
