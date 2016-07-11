@@ -1,0 +1,38 @@
+body {
+font-family: sans-serif;
+background: url(cityscape_3.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-color: #666666;
+}
+div {
+display: inline-block;
+width: 450px;
+height: 130px;
+border: 3px solid white;
+margin-top: 50px;
+margin-left: 100px;
+vertical-align: top;
+}
+.result {
+vertical-align: top;
+text-align: center;
+}
+form {
+width: 400px;
+height: auto;
+font-size: 14px;
+padding: 10px;
+background-color: #CCCCCC;
+margin: 10px;
+}
+legend {
+font-size: 18px;
+padding:10px
+}
+fieldset {
+height: 70px;
+width:auto;
+padding:10px;
+margin: auto;
+}
