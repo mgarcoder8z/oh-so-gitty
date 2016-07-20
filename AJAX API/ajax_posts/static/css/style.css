@@ -1,0 +1,51 @@
+body {
+font-family: sans-serif;
+}
+form {
+width: 450px;
+height: auto;
+font-size: 14px;
+padding: 10px;
+margin: auto;
+}
+legend {
+font-size: 18px;
+padding:10px
+}
+fieldset {
+height: 150px;
+width:auto;
+padding:10px;
+margin: 10px;
+border:2px solid black;
+}
+h1 {
+font-size: 40px;
+text-align: center;
+}
+#container {
+margin: auto;
+}
+div.polaroid {
+  display:inline-block;
+  width: 150px;
+  height:150px;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #BFBFBF;
+  background-color: yellow;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  vertical-align: top;
+  margin: 10px;
+}
+div.rotate_right {
+  float: left;
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Safari */
+  transform: rotate(7deg);
+}
+div.rotate_left {
+  float: left;
+  -ms-transform: rotate(-8deg); /* IE 9 */
+  -webkit-transform: rotate(-8deg); /* Safari */
+  transform: rotate(-8deg);
+}
