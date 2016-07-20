@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Google Directions</title>
+	<script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+	<script type="text/javascript">
+    $(document).ready(function(){
+			$('form').submit(function(){
+				var url = $(this).attr('action');
+				var data = $(this).serialize();
+				$.post(url, data, function(res){
+					var html_str = "";
+					if (res.status == "NOT_FOUND") {
+						html_str += "<h3>NOT FOUND. Please put correct addresses.</h3>";
+					} else if (res.status == "INVALID_REQUEST") {
+						html_str += "<h3>" + res.error_message + "</h3>";
+					} else if (res.status == "ZERO_RESULTS") {
+						html_str += "<h3>ZERO RESULTS! Please be specific!</h3>";
+					} else if (res.status == "OK") {
+						var start = res.routes[0].legs[0].start_address;
+						var end = res.routes[0].legs[0].end_address;
+						var total_distance = res.routes[0].legs[0].distance.text;
+						var total_duration = res.routes[0].legs[0].duration.text;
+						html_str += "<h3>Direction from " + start + " to " + end + "</h3>";
+						html_str += "<h4>Total Distance: " + total_distance + "</h4>";
+						html_str += "<h4>Total Duration: " + total_duration + "</h4>";
+						html_str += "<ol>";
+						for (var  i= 0, arr = res.routes[0].legs[0].steps.length; i < arr; i++){
+							var distance = "[" + res.routes[0].legs[0].steps[i].distance.text + "]";
+							var duration = "[" + res.routes[0].legs[0].steps[i].duration.text + "]";
+							var instruction = " " + res.routes[0].legs[0].steps[i].html_instructions;
+							html_str += "<li>" + distance + duration + instruction + "</li>";
+						}
+						html_str += "</ol>";
+						console.log('yay!');
+					}
+					$('#result').html(html_str);
+					console.log(res);
+				}, 'json');
+				return false;
+			});
+		});
+</script>
+</head>
+<body>
+	<h1>Enter Locations to Generate Directions:</h1>
+	<form action="/main/get_locations" method="post">
+	    <label for="origin">Enter Starting Location:</label>
+	    <input id="origin" name="origin" type="text">
+        <label for="destination">Enter Destination Location:</label>
+	    <input id="destination" name="destination" type="text">
+	    <input type="submit" value="Find Directions">
+	</form>
+	<div id="result"></div>
+</body>
+</html>
