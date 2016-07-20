@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+    	<meta charset="UTF-8">
+        <title>Random Word Generator - Pylot MVC</title>
+        <meta name="description" content="Pylot MVC Random Word Generator">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+      <head>
+      </head>
+      <body>
+          <div>
+              <h1>Random Word Generator</h1>
+      			<p>Random Word (attempt #{{ session['attempt'] }})</p>
+      			<h2>{{ session['random_word'] }}</h2>
+          			<form action="/process" method="POST">
+          				<input type="submit" value="Generate" class="button">
+          			</form>
+          			<form action="/reset" method="POST">
+          				<input type="submit" value="Reset" class="button">
+          			</form>
+      		</div>
+      </body>
+</html>
