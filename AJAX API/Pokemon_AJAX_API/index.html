@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="description" content="Pokemon AJAX JQuery Wall">
+        <title>Pokemon Wall with AJAX and JQuery</title>
+
+        <!--scripts here -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+                    $(document).ready(function(){
+    				var pokemon_data = '';
+    				var pokemon = '';
+    				for(var i = 1;i < 152; i++)	{
+    					pokemon += "<img id='"+i+"'src='http://pokeapi.co/media/img/"+ i +".png'>";
+    				}
+    				//display all pokemon images
+    				$('#pokemon_wall').html(pokemon);
+                    //display pokemon on click in box on right
+                    $(document).on("click", "img", (function(){
+                        var current_pokemon_id = $(this).attr("id");
+                        console.log(current_pokemon_id);
+                        $.get("http://pokeapi.co/api/v1/pokemon/" + current_pokemon_id, function(response){
+                            console.log(response)
+                        $('p.box').html("<h1>" + response.name + "</h1>"
+                            +   "<img src = 'http://pokeapi.co/media/img/" +current_pokemon_id +".png'>"
+                            +   "<h3>Types<h3>"
+                            +   "<ul></li>" + response.types[0].name + "</li></ul>"
+                            +   "<h3>Height<h3>"
+                            +   "<ul></li>" + response.height + "</li></ul>"
+                            +   "<h3>Weight<h3>"
+                            +   "<ul></li>" + response.weight + "</li></ul>"
+                        );},"json")}))
+                    })
+        </script>
+<style>
+        #pokemon_wall {
+        width: 840px;
+        display:inline-block;
+        border: 1px solid black;
+        padding: 20px;
+        }
+        #sidebox {
+        width: 330px;
+        height: 530px;
+        display:inline-block;
+        border: 15px solid red;
+        vertical-align: top;
+        }
+        .box {
+        width: 300px;
+        height: 430px;
+        display:inline-block;
+        padding-left:30px;
+        }
+        h2 {
+        text-align: center;
+        }
+</style>
+    </head>
+    <body>
+        <div id="pokemon_wall">
+        </div>
+        <div id="sidebox">
+            <p class="box">
+
+            </p>
+        </div>
+    </body>
+</html>

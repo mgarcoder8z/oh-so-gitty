@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="description" content="Weather by City">
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Find the weather in any city</title>
+
+        <!--scripts here -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+                    $(document).ready(function(){
+                        $('#myform').submit(function(){
+                            var api_key = 'a65d5861df2a1a52a75eaff29acb09ee';
+                            var city = $('input:text[name=city]').val();
+                    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=imperial&appid=' + api_key, function(res){
+                        var html_str = '';
+                        html_str += "<h2>" + res['name'] + "</h2>";
+                        html_str += "<p>" + res['weather'][0]['description'] + "</p>";
+                        html_str += "<p>" + "Temperature: " + res['main']['temp'] + " F</p>";
+                        $('div.result').html(html_str);
+                    }, 'jsonp');
+                    return false;
+           })
+        });
+        </script>
+        <style>
+            body {
+            font-family: sans-serif;
+            background: url(cityscape_3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #666666;
+            }
+            div {
+            display: inline-block;
+            width: 450px;
+            height: 130px;
+            border: 3px solid white;
+            margin-top: 50px;
+            margin-left: 100px;
+            vertical-align: top;
+            }
+            .result {
+            vertical-align: top;
+            text-align: center;
+            }
+            form {
+            width: 400px;
+            height: auto;
+            font-size: 14px;
+            padding: 10px;
+            background-color: #CCCCCC;
+            margin: 10px;
+            }
+            legend {
+            font-size: 18px;
+            padding:10px
+            }
+            fieldset {
+            height: 70px;
+            width:auto;
+            padding:10px;
+            margin: auto;
+            }
+            h1 {
+            color:white;
+            font-size: 40px;
+            text-align: center;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>What is the weather like in your city?</h1>
+            <div>
+                <form id="myform">
+                  <fieldset>
+                    <legend>Enter a City to Check the Weather</legend>
+                      <input type="text" name="city" placeholder="Enter a City" id="city"/>
+                      <input type="submit" name="weather" value="Submit" class="submit"/>
+                  </fieldset>
+                </form>
+            </div>
+            <div class="result">
+                <h4></h4>
+                <p></p>
+            </div>
+      </body>
+    </html>
