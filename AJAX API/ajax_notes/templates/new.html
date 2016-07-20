@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Create Note</title>
+  </head>
+  <body>
+    <form action='/notes/create' method='post'>
+      <p>Title: <input name='title' type = 'text' /></p>
+      <p>Description: <textarea name='description' type = 'text' id="description" cols="50" rows="5" placeholder="Type in a note"/></textarea>
+      <button>Create!</button>
+    </form>
+    <a href="/notes">Home</a>
+  </body>
+</html>
