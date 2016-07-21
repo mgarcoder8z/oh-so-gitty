@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Survey Form - Django</title>
+        {% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static 'css/survey_app/style.css' %}">
+    </head>
+    <body>
+        <h1>Survey Form - Django MVC</h1>
+              <fieldset style="background-color: #F0FFF0;">
+                <legend>Please Complete The Survey Form Below:</legend>
+                  <form action='/process' method='POST'>{% csrf_token %}
+                      <label>Name:</label>
+                      <input type='text' name='name' placeholder='Name'></label><br>
+
+                      <label>Dojo Location:</label><br>
+                        <select name='location' size="8">
+                            <option value="Seattle">Seattle</option>
+                            <option value="Los Angeles">Los Angeles</option>
+                            <option value="Washington, DC">Washington, DC</option>
+                            <option value="Online">Online</option>
+                        </select><br>
+
+                      <label>Favorite Language:</label><br>
+                        <select name='language' size="6">
+                            <option value="C">C-Language</option>
+                            <option value="Python">Python</option>
+                            <option value="Javascript">Javascript</option>
+                            <option value="Objective-C">Objective-C</option>
+                        </select><br>
+
+                      <label>Comments:</label><br>
+                        <textarea name='comments' cols="50" rows="5"></textarea><br>
+                        <input type='submit' value='Submit Survey'>
+                  </form>
+              </fieldset>
+    </body>
+</html>

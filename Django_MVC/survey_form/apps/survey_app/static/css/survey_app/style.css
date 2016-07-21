@@ -1,0 +1,69 @@
+body {
+font-family: sans-serif;
+}
+
+h1, h2 {
+text-align: center;
+}
+p {
+text-align: center;
+}
+img {
+display: block;
+width:auto;
+height:auto;
+margin:auto;
+}
+#container {
+display:block;
+width: 800px;
+height:auto;
+padding: 10px;
+margin: auto;
+}
+.message {
+display:inline-block;
+width: 200px;
+height: 200px;
+background-color: red;
+color: white;
+font-size: 18px;
+text-align: center;
+margin:auto;
+vertical-align: middle;
+}
+.message2 {
+display:inline-block;
+width: 150px;
+height: 150px;
+background-color: green;
+color: white;
+font-size: 18px;
+text-align: center;
+vertical-align: middle;
+margin:auto;
+}
+.results {
+display:inline-block;
+width: 270px;
+margin-left: 0px;
+text-align: left;
+border:none;
+}
+form {
+vertical-align: top;
+margin:10px;
+padding:10px;
+}
+fieldset {
+height:auto;
+border: 2px solid black;
+border-radius: 10px;
+padding: 10px;
+}
+legend {
+background-color: #efefef;
+border: 2px solid #dcdcdc;
+text-align: center;
+text-transform: uppercase;
+}

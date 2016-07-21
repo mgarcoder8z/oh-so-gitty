@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Survey Form Results - Django</title>
+        {% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static 'css/survey_app/style.css' %}">
+    </head>
+    <body>
+        <div>
+            <h1>Survey Form Results</h1>
+                <p>Thank you for your feedback.</p>
+                <h1>Submitted Info:</h1>
+                      <p>Name:<br>{{request.session.name}}</p>
+                      <p>Location:<br>{{request.session.location}}</p>
+                      <p>Favorite Language:<br>{{request.session.language}}</p>
+                      <p>Comments:<br>{{request.session.comments}}</p>
+        </div>
+    </body>
+</html>
