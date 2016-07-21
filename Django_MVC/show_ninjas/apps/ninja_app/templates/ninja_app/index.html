@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Disappearing Ninja</title>
+      {% load staticfiles %}
+      <link rel="stylesheet" type="text/css" href="{% static 'ninja_app/css/style.css' %}">
+    </head>
+    <body class="green">
+        {% if not ninja %}
+            <h1>Sorry, No Ninjas Here</h1>
+        {% else %}
+            {% static ninja as myninja %}
+            <img src="{{myninja}}">
+        {% endif %}
+    </body>
+</html>
