@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Django - Email Validation Success</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'email_val/css/style.css' %}">
+	</head>
+    <body>
+        <section>
+            {% if request.session.message %}
+				<h2>{{ request.session.message }}</h2>
+			{% endif %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Added Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for email in emails %}
+                    <tr>
+                        <td>{{ email.email }}</td>
+                        <td>{{ email.created_at }}</td>
+                        <td>
+                            <form action="/destroy/{{ email.id }}" method="post">
+                                {% csrf_token %}
+                                <input type="submit" value="DELETE"  class="delete">
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <form action="/success" method="post">
+                {% csrf_token %}
+                <input type="submit" value="Go Back">
+            </form>
+        </section>
+	</body>
+</html>

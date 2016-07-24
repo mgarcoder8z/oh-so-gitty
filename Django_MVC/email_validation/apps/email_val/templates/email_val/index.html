@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Django - Email Validation Submission</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'email_val/css/style.css' %}">
+	</head>
+    <body>
+        <section>
+            <h1>Please enter your email</h1>
+            <form action="/process" method="POST">{% csrf_token %}
+                <input type="text" name="email" placeholder="Enter a valid email address">
+                <input type="submit" name="submit" value="Submit">
+            </form>
+            <p>If ERRORS, Messages will appear below:</p>
+            <div class="message" id="red">
+				{% if request.session.error %}
+				<h2>{{ request.session.error }}</h2>
+				{% endif %}
+			</div>
+        </section>
+	</body>
+</html>
