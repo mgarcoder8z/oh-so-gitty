@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8" />
+		<title>Django - Show User Schedule</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'wall/css/style.css' %}">
+        <style>
+        body {
+            background-image: url('{% static 'wall/img/honeydukes.jpeg' %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        </style>
+	</head>
+    <body>
+        <header>
+            <nav id="nav_left" class="capitalize">
+                Schedule For {{ user.first_name }}  {{ user.last_name }}
+            </nav>
+            <nav id="nav_right">
+                {% if messages %}
+                    {% for message in messages %}
+                    <p class="messages" {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                        {{ message }}
+                    {% endfor %}
+                </p>
+                {% endif %}
+                <form action="/logout">{% csrf_token %}
+                    <input type="submit" value="Logout">
+                </form>
+            </nav>
+        </header>
+        <section>
+            <h1>Show {{ user.first_name }}'s Schedule</h1>
+                <p>Current Information:</p>
+                <p>First Course: {{ course.first_course }}</p>
+                <p>Second Course: {{ course.second_course }}</p>
+                <p>Third Course: {{ course.third_course }}</p>
+                <form action="/success">{% csrf_token %}
+                    <input type="submit" value="Back to List">
+                </form>
+        </section>
+    </body>
+    <!--<script type="text/javascript">
+        document.getElementById('first_course').value = "{{ first_course }}"
+        document.getElementById('second_course').value = "{{ second_course }}"
+        document.getElementById('third_course').value = "{{ third_course }}"
+    </script>-->
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8" />
+		<title>Django - House Selector Quiz</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'wall/css/style.css' %}">
+        <style>
+        body {
+            background-image: url('{% static 'wall/img/hogsmeade.jpeg' %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        </style>
+	</head>
+    <body>
+        <header>
+            <nav id="nav_left" class="capitalize">
+                Sorting Hat Quiz for {{ user.first_name }}
+            </nav>
+            <nav id="nav_right">
+                {% if messages %}
+                    {% for message in messages %}
+                    <p class="messages" {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                        {{ message }}
+                    {% endfor %}
+                </p>
+                {% endif %}
+                <form action="/logout">{% csrf_token %}
+                    <input type="submit" value="Logout">
+                </form>
+            </nav>
+        </header>
+        <section id="large">
+            <h2 class="capitalize">House Selector Quiz for: {{user.first_name}} {{user.last_name}}</h2>
+                <p>Enter the one question that best describes you and the Sorting Hat will assign you a House.</p>
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <form action="/quiz/{{ user.id }}" method="POST">
+                    {% csrf_token %}
+                    <p><label for="first_name">Questions:</p>
+                    <p><input type="radio" name="question1" id="question1" value="Gryffindor"/>Are you brave enough to fight a Troll if it meant saving your friend?</p>
+                    <p><input type="radio" name="question2" id="question2" value="Ravenclaw"/>Are you insatiably curious or did you receive one of the top scores on your O.W.L.S exam?</p>
+                    <p><input type="radio" name="question3" id="question3" value="Hufflepuff"/>Do your friends say you are the kindest, most patient, caring person they know?</p>
+                    <p><input type="radio" name="question4" id="question4" value="Slytherin"/>Are you charismatic and like to brag and control others, but afraid of danger?</p>
+
+                    <p><input type="submit" value="Suggest a House"></p>
+                </form>
+                <h3>Your Current House is: {{ user.house }}!</h3>
+                <h3>The Sorting Hat Suggested House Based on Your Answer is:{{ sorted_house }}!</h3>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Django - Login</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'wall/css/style.css' %}">
+        <style>
+        body {
+            background-image: url('{% static 'wall/img/hogwarts2.jpeg' %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        </style>
+	</head>
+	<body>
+        <header>
+            <nav id="nav_left">
+                My Django Project
+            </nav>
+            <nav id="nav_right">
+                <form action="/process/login" method='POST'>{% csrf_token %}
+                <input type="email" name="email" placeholder="email@abc.com">
+                <input type="password" name="password" placeholder="password">
+                <input type="submit" name="submit" value="Login">
+                </form>
+            </nav>
+        </header>
+            <section>
+                <h1>Welcome to Hogwarts!</h1>
+                    <h2>Student Registration:</h2>
+                        <p>Please complete the registration below. *All Fields Required.</p>
+                        {% if messages %}
+                            <ul class="messages" id="red">
+                                    {% for message in messages %}
+                                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                                    {% endfor %}
+                             </ul>
+                        {% endif %}
+                        <form action='process/register' method='POST'>{% csrf_token %}
+                            <p><label for="first_name" id="purple">First Name*:</label></p>
+                            <p><input type="text" name="first_name" id="first_name" placeholder="First Name"></p>
+
+                            <p><label for="last_name" id="purple">Last Name*:</label></p>
+                            <p><input type="text" name="last_name" id="last_name" placeholder="Last Name"></p>
+
+                            <p><label for="email" id="purple">Email*:</label></p>
+                            <p><input type="email" name="email" id="email" placeholder="email@domain.com"></p>
+
+                            <p><label for="house" id="purple">Select a House (Default: Not Assigned):</label></p>
+                              <input type="radio" name="house" value="Gryffindor" id="house" />Gryffindor
+                              <input type="radio" name="house" value="Slytherin" id="house" />Slytherin
+                              <input type="radio" name="house" value="Ravenclaw" id="house" />Ravenclaw
+                              <input type="radio" name="house" value="Hufflepuff" id="house" />Hufflepuff
+                              <input type="radio" name="house" value="Not Assigned" id="house" checked="checked" />Not Assigned<br>
+
+                             <p><label for="password" id="purple">Password*:</label></p>
+                             <p><input type="password" name="password" id="password" placeholder="Enter password"></p>
+
+                             <p><label for="confirm" id="purple">Confirm Password*:</label></p>
+                             <p><input type="password" name="confirm" id="confirm" placeholder="Confirm password"></p>
+                             <p><input type="submit" name="submit" value="Register"></p>
+                        </form>
+            </section>
+    </body>
+</html>

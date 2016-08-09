@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Django - Remove User</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'wall/css/style.css' %}">
+        <style>
+        body {
+            background-image: url('{% static 'wall/img/express.jpeg' %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        </style>
+	</head>
+    <body>
+        <header>
+            <nav id="nav_left" class="capitalize">
+                Remove Student {{ user.first_name }}  {{ user.last_name }}
+            </nav>
+            <nav id="nav_right">
+                {% if messages %}
+                    {% for message in messages %}
+                    <p class="messages" {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                        {{ message }}
+                    {% endfor %}
+                </p>
+                {% endif %}
+                <form action="/logout">{% csrf_token %}
+                    <input type="submit" value="Logout">
+                </form>
+            </nav>
+        </header>
+        <section>
+            <h1 class="capitalize">Are you sure that you wish to delete {{ user.first_name }} {{ user.last_name }}?</h1>
+
+        		<h3>First Name:</h3>
+                <p class="box capitalize">{{ user.first_name }}</p>
+
+                <h3>Last Name:</h3>
+                <p class="box capitalize">{{ user.last_name }}</p>
+
+                <h3>Email:</h3>
+                <p class="box">{{ user.email }}</p>
+
+                <h3>House:</h3>
+                <p class="box">{{ user.house }}</p>
+
+
+            		<form action="/success" method="GET">
+            			<input type="submit" value="NO, Cancel" id="red_button">
+            		</form>
+            		<form action="/destroy/{{ user.id }}" method="POST">
+            			{% csrf_token %}
+            			<input type="submit" value="Yes! I want to delete this">
+            		</form>
+        </section>
+	</body>
+</html>

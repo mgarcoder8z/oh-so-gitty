@@ -1,0 +1,246 @@
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  margin: 0px;
+}
+#container {
+display: block;
+width: auto;
+height: auto;
+}
+div {
+display:inline-block;
+width: 700px;
+height:auto;
+border: 1px solid gray;
+text-align: left;
+padding:20px;
+}
+#main {
+display:block;
+width: 95%;
+height:200px;
+margin:10px;
+border-radius: 10px;
+text-align: left;
+padding:20px;
+}
+header {
+display: block;
+width: 100%;
+height: 50px;
+vertical-align: top;
+background-color: purple;
+margin: 0px;
+}
+#nav_right {
+display: inline-block;
+width: 600px;
+height:20px;
+padding: 5px;
+text-align: right;
+font-weight: bold;
+font-size: 18px;
+float:right;
+color: black;
+vertical-align: top;
+}
+#nav_left {
+display: inline-block;
+width: 400px;
+height:20px;
+font-size: 24px;
+margin: 5px;
+padding: 5px;
+text-align: left;
+float:left;
+color: white;
+vertical-align: top;
+}
+section {
+display:inline-block;
+width: 450px;
+height:auto;
+margin-top: 10px;
+margin-left: 10px;
+text-align: left;
+padding:5px;
+overflow: auto;
+border: 2px solid purple;
+border-radius: 10px;
+vertical-align: bottom;
+background-color: #FFFFFF;
+opacity: 0.8;
+filter: alpha(opacity=80); /* For IE8 and earlier*/
+overflow: auto;
+}
+section#large {
+display:inline-block;
+width: 95%;
+height:auto;
+margin-top: 10px;
+margin-left: 10px;
+text-align: left;
+padding:10px;
+overflow: auto;
+border: 1px solid black;
+border-radius: 10px;
+vertical-align: top;
+background-color: #FFFFFF;
+opacity: 0.7;
+filter: alpha(opacity=70); /* For IE8 and earlier*/
+overflow: auto;
+}
+section#small {
+display:inline-block;
+width: 28%;
+height:auto;
+margin: 15px;
+text-align: left;
+padding:10px;
+overflow: auto;
+border: 1px solid black;
+border-radius: 10px;
+vertical-align: top;
+}
+h1 {
+color: purple;
+font-size: 30px;
+text-align: left;
+margin: 10px;
+}
+h2, h3, h4, h5 {
+color: black;
+text-align: left;
+margin: 10px;
+}
+p {
+margin:10px;
+}
+.comment {
+color:blue;
+margin: 10px;
+font-size: 12px;
+border-top: 1px solid black;
+padding-top: 10px;
+}
+/* unvisited link */
+a:link {
+    color: orange;
+}
+
+/* visited link */
+a:visited {
+    color: gray;
+}
+
+/* mouse over link */
+a:hover {
+    color: orange;
+}
+
+/* selected link */
+a:active {
+    color: gray;
+}
+.title {
+text-transform: capitalize;
+color: green;
+margin: 10px;
+font-size: 18px;
+}
+.blog {
+font-size: 12px;
+padding-bottom: 20px;
+margin: 10px;
+}
+table {
+width: 98%;
+margin: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+tr:nth-child(even) {
+background-color: #f2f2f2}
+}
+tr {
+padding: 5px;
+}
+td {
+border-bottom: 1px solid #ddd;
+padding: 10px;
+text-align: left;
+height: 40px;
+vertical-align:middle;
+}
+th {
+background-color: #4CAF50;
+color: white;
+text-align: left;
+padding: 15px;
+}
+label {
+margin: 10px;
+}
+.capitalize {
+text-transform: capitalize;
+}
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 3px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+}
+input[type=text] {
+    width: 80%;
+    padding: 5px 20px;
+    margin-top: 3px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+}
+input[type=email] {
+    width: 200px;
+    padding: 5px 20px;
+    margin-top: 3px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+}
+input[type=password] {
+    width: auto;
+    padding: 5px 20px;
+    margin-top: 3px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+}
+input[type=textarea] {
+    width: auto;
+    padding: 8px 20px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid gray;
+}
+input[type=submit] {
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px;
+}
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+#red {
+color: red;
+}
+#green {
+color: green;
+}
+#purple {
+color: purple;
+font-weight: bold;
+}

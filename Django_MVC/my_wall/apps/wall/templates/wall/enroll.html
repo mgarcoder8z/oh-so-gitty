@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8" />
+		<title>Django - Enroll</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'wall/css/style.css' %}">
+        <style>
+        body {
+            background-image: url('{% static 'wall/img/hogsmeade.jpeg' %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        </style>
+	</head>
+    <body>
+        <header>
+            <nav id="nav_left" class="capitalize">
+                Enrollment For: {{ user.first_name }}  {{ user.last_name }}
+            </nav>
+            <nav id="nav_right">
+                {% if messages %}
+                    {% for message in messages %}
+                    <p class="messages" {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                        {{ message }}
+                    {% endfor %}
+                </p>
+                {% endif %}
+                <form action="/logout">{% csrf_token %}
+                    <input type="submit" value="Logout">
+                </form>
+            </nav>
+        </header>
+        <section id="large">
+            <h2 class="capitalize">User ID: {{ user.id }}</h2>
+                <h4>Courses Available: Select three courses (*required)</h4>
+                <h4>After successful enrollment, your schedule can be viewed by clicking Show next to your name on the main list of students.</h4>
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <form action="/enroll/{{ user.id }}" method="POST">
+                    {% csrf_token %}
+                    <p><label for="first_course" id="purple">First Course *:</p>
+                        <input type="radio" name="first_course" value="Defense Against the Dark Arts" id="first_course" />Defense Against the Dark Arts
+                        <input type="radio" name="first_course" value="Herbology" id="first_course" />Herbology
+                        <input type="radio" name="first_course" value="Quidditch" id="first_course"/>Quidditch
+                        <input type="radio" name="first_course" value="Not Assigned" id="first_course" />Not Assigned
+                    <p><label for="second_course" id="purple">Second Course *:</p>
+                        <input type="radio" name="second_course" value="Divination" id="second_course" />Divination
+                        <input type="radio" name="second_course" value="Potions" id="second_course" />Potions
+                        <input type="radio" name="second_course" value="Magical Beasts" id="second_course"/>Magical Beasts
+                        <input type="radio" name="second_course" value="Not Assigned" id="second_course" />Not Assigned
+                    <p><label for="third_course" id="purple">Third Course *:</p>
+                        <input type="radio" name="third_course" value="Choir" id="third_course" />Choir
+                        <input type="radio" name="third_course" value="Broom Skills" id="third_course"/>Broom Skills
+                        <input type="radio" name="third_course" value="Spells" id="third_course" />Spells
+                        <input type="radio" name="third_course" value="Not Assigned" id="third_course" />Not Assigned
+                    <p><input type="submit" value="Enroll"></p>
+                </form>
+                    <p><a href="/success" method="GET">Go Back to List</a></p>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8" />
+		<title>Django - Edit</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'wall/css/style.css' %}">
+        <style>
+        body {
+            background-image: url('{% static 'wall/img/hogsmeade.jpeg' %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        </style>
+	</head>
+    <body>
+        <header>
+            <nav id="nav_left" class="capitalize">
+                Edit {{ user.first_name }} {{ user.last_name }}
+            </nav>
+            <nav id="nav_right">
+                {% if messages %}
+                    {% for message in messages %}
+                    <p class="messages" {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                        {{ message }}
+                    {% endfor %}
+                </p>
+                {% endif %}
+                <form action="/logout">{% csrf_token %}
+                    <input type="submit" value="Logout">
+                </form>
+            </nav>
+        </header>
+        <section id="large">
+            <h2 class="capitalize">Edit User ID: {{ user.id }}, {{user.first_name}} {{user.last_name}}</h2>
+                <p>Current Information:</p>
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <form action="/edit/{{ user.id }}" method="POST">
+                    {% csrf_token %}
+                    <p><label for="first_name">First Name:</p>
+                    <p><input type="text" name="first_name" id="first_name" placeholder="First Name" class="capitalize"></label></p>
+                    <p><label for="last_name">Last Name:</p>
+                    <p><input type="text" name="last_name" id="last_name" placeholder="Last Name" class="capitalize"></label></p>
+                    <p><label for="email">Email:</p>
+                    <p><input type="email" name="email" id="email" placeholder="Email"></label></p>
+                    <p><label for="house" id="purple">Current House: {{ user.house }}</label></p>
+                        <input type="radio" name="house" value="Gryffindor" id="house" />Gryffindor
+                        <input type="radio" name="house" value="Slytherin" id="house" />Slytherin
+                        <input type="radio" name="house" value="Ravenclaw" id="house" />Ravenclaw
+                        <input type="radio" name="house" value="Hufflepuff" id="house" />Hufflepuff
+                        <input type="radio" name="house" value="Not Assigned" id="house" />Not Assigned
+                    <p><label for="first_course" id="purple">Current First Course *: {{ user.first_course }}</p>
+                        <input type="radio" name="first_course" value="Defense Against the Dark Arts" id="first_course" />Defense Against the Dark Arts
+                        <input type="radio" name="first_course" value="Herbology" id="first_course" />Herbology
+                        <input type="radio" name="first_course" value="Quidditch" id="first_course"/>Quidditch
+                        <input type="radio" name="first_course" value="Not Assigned" id="first_course" />Not Assigned
+                    <p><label for="second_course" id="purple">Current Course *: {{ user.second_course }}</p>
+                        <input type="radio" name="second_course" value="Divination" id="second_course" />Divination
+                        <input type="radio" name="second_course" value="Potions" id="second_course" />Potions
+                        <input type="radio" name="second_course" value="Magical Beasts" id="second_course"/>Magical Beasts
+                        <input type="radio" name="second_course" value="Not Assigned" id="second_course" />Not Assigned
+                    <p><label for="third_course" id="purple">Current Third Course *: {{ user.third_course }}</p>
+                        <input type="radio" name="third_course" value="Choir" id="third_course" />Choir
+                        <input type="radio" name="third_course" value="Broom Skills" id="third_course"/>Broom Skills
+                        <input type="radio" name="third_course" value="Spells" id="third_course" />Spells
+                        <input type="radio" name="third_course" value="Not Assigned" id="third_course" />Not Assigned
+                    <p><input type="submit" value="Update"></p>
+                </form>
+                    <p><a href="/success" method="GET">Go Back to List</a></p>
+        </section>
+    </body>
+        <script type="text/javascript">
+            document.getElementById('first_name').value = "{{ user.first_name }}"
+            document.getElementById('last_name').value = "{{ user.last_name }}"
+            document.getElementById('email').value = "{{ user.email }}"
+            document.getElementById('house').value = "{{ user.house }}"
+            document.getElementById('first_course').value = "{{ user.first_course }}"
+            document.getElementById('second_course').value = "{{ user.second_course }}"
+            document.getElementById('third_course').value = "{{ user.third_course }}"
+        </script>
+</html>
