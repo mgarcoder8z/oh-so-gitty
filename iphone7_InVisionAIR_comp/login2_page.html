@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://use.fontawesome.com/ab548d087e.js"></script>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="base.css">
+
+        <!--scripts here -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+                    $(document).ready(function(){
+                        $('#myform').submit(function(){
+                            var api_key = 'a65d5861df2a1a52a75eaff29acb09ee';
+                            var city = $('input:text[name=city]').val();
+                    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=imperial&appid=' + api_key, function(res){
+                        var html_str = '';
+                        html_str += "<p>" + res['weather'][0]['description'] + "," + "Temperature: " + res['main']['temp'] + " F " + "</p>";
+                        $('div.result').html(html_str);
+                    }, 'jsonp');
+                    return false;
+           })
+        });
+        </script>
+    </head>
+    <body>
+        <div class="iphone7">
+            <div class="box">
+                <p class="smallnavboxleft">Verizon <i class="fa fa-wifi"></i></p>
+                <p class="smallnavboxmid">10:30 AM <i class="fa fa-signal"></i></p>
+                <p class="smallnavboxright">100% <i class="fa fa-battery-full"></i></p>
+                <h1>InVisionAIR</h1>
+
+            <div id="origin">
+                <p>SEA</p>
+            </div>
+            <div id="destination">
+                <p>BOS</p>
+            </div>
+
+            <form action="" method="POST">
+                <p><input type="email" name="email" value="email@domain.com"></p>
+                <p><input type="password" name="password" value="Password"></p>
+            </form>
+            <button>Sign In</button>
+            <p class="bluetext">Create Account</p>
+        </div>
+    </body>
+</html>
